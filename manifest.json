@@ -1,0 +1,19 @@
+{
+  "name": "Replacerator",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "cloud to butt",
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "js": [ "unit_replace.js" ],
+      "matches": [ "http://*/*", "https://*/*", "file:///*" ]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "*://*/*",
+    "<all_urls>",
+    "storage"
+  ]
+}

@@ -1,0 +1,36 @@
+body {
+  width: 400px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif; }
+
+input {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1em;
+  outline: none;
+  border-radius: 4px;
+  padding: 0.3em 0.6em;
+  border: none; }
+  input.from {
+    background-color: #fdf3e8; }
+  input.to {
+    background-color: #ecf5e0; }
+
+.rule {
+  margin: 0.5em;
+  vertical-align: top; }
+  .rule .fa-long-arrow-right {
+    margin-top: 0.3em; }
+
+.from, .to {
+  display: inline;
+  padding: 0.3em 0.6em; }
+
+.from {
+  text-align: right; }
+
+.add-button, .delete-button {
+  cursor: pointer; }
+
+.delete-button:hover {
+  color: #f00; }
+
+/*# sourceMappingURL=options.css.map */
