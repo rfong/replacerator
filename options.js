@@ -43,6 +43,8 @@
       var from = $('#add-rule input.from').val(),
           to = $('#add-rule input.to').val();
 
+      if (!from) return;
+
       storage.get('rules', function(response) {
         rules = response.rules || {};
 
@@ -58,6 +60,7 @@
 
     // handlers
     $('#add-rule input').keypress( function(e){ if (e.which==13) addRule() });
+    $('#add-rule .add-button').click( addRule );
   });
 
 })();
