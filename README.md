@@ -5,6 +5,8 @@ Having grown weary of forking cloud-to-butt whenever I needed to get my `s/from/
 
 Comes preloaded with cloud-to-butt, and "political correctness" to "treating people with respect".
 
+![butts](/images/options.png?raw=true)
+
 todo
 -----
 - enforce acyclic graph so it's impossible to define rules that cycle forever
