@@ -6,7 +6,7 @@
   "options_page": "options.html",
   "content_scripts": [
     {
-      "js": [ "unit_replace.js" ],
+      "js": [ "replace.js" ],
       "matches": [ "http://*/*", "https://*/*", "file:///*" ]
     }
   ],
