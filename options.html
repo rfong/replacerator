@@ -8,15 +8,29 @@
 </head>
 <body>
 
-  <h1>Replacerator Rules</h1>
-
-  <table id="rules">
-    <tr id="add-rule">
-      <td><input type="text" placeholder="from" class="from" /></td>
-      <td><i class="fa fa-long-arrow-right"></i></td>
-      <td><input type="text" placeholder="to" class="to" /></td>
-      <td><i class="add-button fa fa-plus"></i></td>
-    </tr>
-  </table>
+  <div class="section">
+    <h1>Replacerator Rules</h1>
+    <table id="rules">
+      <tr id="add-rule">
+        <td><input type="text" placeholder="from" class="from" /></td>
+        <td><i class="fa fa-long-arrow-right"></i></td>
+        <td><input type="text" placeholder="to" class="to" /></td>
+        <td><i class="add-button fa fa-plus"></i></td>
+      </tr>
+    </table>
+  </div>
+ 
+  <div class="section">
+    <h1>Export / Import</h1>
+    <div>
+      <button class="button" id="export-json">
+        <i class="fa fa-file-code-o"></i> Export</button>
+      <button class="button" id="add-json">
+        <i class="fa fa-plus"></i> Add rules</button>
+      <button class="button" id="replace-json">
+        <i class="fa fa-recycle"></i> Replace rules</button>
+    </div>
+    <textarea id="rules-json"></textarea>
+  </div>
 
 </body>

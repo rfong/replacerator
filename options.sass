@@ -1,9 +1,20 @@
+@import mixins
+
+$grey-area: #f9f9f9
+$chartreuse: #e0ff94
+$green-area: #ecf5e0
+$green-area-emph: #dff5c2
+$orange-area: #fdf3e8
+
+// Generics
+
 body
   width: 400px
   font-family: 'Helvetica Neue', Helvetica, sans-serif
   padding: 2em 3em
+  font-size: 1em
 
-input
+input, textarea, .button
   font-family: 'Helvetica Neue', Helvetica, sans-serif
   font-size: 1em
   outline: none
@@ -12,9 +23,27 @@ input
   border: none
 
   &.from
-    background-color: #fdf3e8
+    background-color: $orange-area
   &.to
-    background-color: #ecf5e0
+    background-color: $green-area
+
+textarea
+  background-color: $grey-area
+  width: 100%
+  height: 100px
+
+.button
+  +button
+  background-color: $grey-area
+  &:hover
+    background-color: $green-area-emph
+  &[disabled]
+    background-color: $grey-area
+
+// Layout
+
+.section:not(:first-child)
+  margin-top: 4em
 
 .rule
   margin: 0.5em
@@ -33,3 +62,4 @@ input
   margin-top: 0.25em
 .delete-button:hover
   color: #f00
+  transition: 0.2s
