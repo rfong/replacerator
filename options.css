@@ -1,6 +1,7 @@
 body {
   width: 400px;
-  font-family: "Helvetica Neue", Helvetica, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  padding: 2em 3em; }
 
 input {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
