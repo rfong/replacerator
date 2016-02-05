@@ -10,3 +10,4 @@ Comes preloaded with cloud-to-butt, and "political correctness" to "treating peo
 todo
 -----
 - enforce acyclic graph so it's impossible to define rules that cycle forever
+- some way to set precedence for rules which are substrings of each other

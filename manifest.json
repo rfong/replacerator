@@ -1,9 +1,13 @@
 {
   "name": "Replacerator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "manifest_version": 2,
   "description": "Define custom rules to replace text in your browser.",
   "options_page": "options.html",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
   "content_scripts": [
     {
       "js": [ "replace.js" ],

@@ -9,7 +9,6 @@
   }
 
 
-  // update
   function display() {
     storage.get('rules', function(response) {
       var main = $('#rules');
@@ -59,21 +58,6 @@
 
     // handlers
     $('#add-rule input').keypress( function(e){ if (e.which==13) addRule() });
-  });
-
-
-  // If never defined, prepopulate with some rules.
-  // chrome.runtime.onInstalled event does not seem to be firing.
-  storage.get('rules', function(response) {
-    if (response.rules === undefined) {
-      chrome.storage.local.set({
-        rules: {
-          'the cloud': 'my butt',
-          'political correctness': 'treating people with respect',
-          'politically correct': 'respectful',
-        }
-      });
-    }
   });
 
 })();
