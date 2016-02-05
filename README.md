@@ -5,7 +5,7 @@ Having grown weary of forking cloud-to-butt whenever I needed to get my `s/from/
 
 Comes preloaded with cloud-to-butt, and "political correctness" to "treating people with respect".
 
-![butts](/images/options.png?raw=true)
+[[screenshot_options.png | width=400px]]
 
 todo
 -----
