@@ -40,17 +40,3 @@
   });
 
 })();
-
-
-// If new version is installed, prepopulate with some rules.
-chrome.runtime.onInstalled.addListener(function(details) {
-  if (details.reason in ["install", "update"]) {
-    chrome.storage.local.set({
-      rules: {
-        'the cloud': 'my butt',
-        'political correctness': 'treating people with respect',
-        'politically correct': 'respectful',
-      }
-    });
-  }
-});
