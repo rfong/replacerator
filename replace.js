@@ -26,7 +26,6 @@
   }
   
   function handleText(text) {
-    console.log(text)
     for (var from in rules) {
       text = text.replace(
         new RegExp('\\b' + from + '\\b', 'ig'),  // case insensitive
@@ -50,6 +49,7 @@ chrome.runtime.onInstalled.addListener(function(details) {
       rules: {
         'the cloud': 'my butt',
         'political correctness': 'treating people with respect',
+        'politically correct': 'respectful',
       }
     });
   }

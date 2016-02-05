@@ -45,18 +45,12 @@ $(document).ready(function() {
     storage.get('rules', function(response) {
       rules = response.rules || {};
 
-      // already exists
-      if (_.some(rules,
-                 function(rule_from, rule_to) { return rule_to == to; })) {
-        return;
-      }
-      // todo prevent mirrored
-
-      rules[from] = to;
+      rules[from] = to;  // allow to overwrite existing keys
       updateRules(rules);
 
-      // clear old
+      // reset inputs
       _.each($('#add-rule input'), function(input) { $(input).val(''); });
+      $('#add-rule .from').focus();
     });
 
   };
