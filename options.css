@@ -1,5 +1,5 @@
 body {
-  width: 400px;
+  width: 550px;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   padding: 2em 3em;
   font-size: 1em; }
@@ -9,19 +9,23 @@ input, textarea, .button {
   font-size: 1em;
   outline: none;
   border-radius: 4px;
-  padding: 0.3em 0.6em;
+  padding: 0.3em 0.5em;
   border: none; }
-  input.from, textarea.from, .button.from {
+  input#from-text, textarea#from-text, .button#from-text {
     background-color: #fdf3e8; }
-  input.to, textarea.to, .button.to {
-    background-color: #ecf5e0; }
+  input#to-text, textarea#to-text, .button#to-text {
+    background-color: #ecf5e0;
+    width: 300px; }
+
+input {
+  width: 100%; }
 
 textarea {
   background-color: #f9f9f9;
   width: 100%;
   height: 100px; }
 
-.button {
+button, .button {
   text-decoration: none;
   text-shadow: none;
   display: inline-block;
@@ -33,35 +37,90 @@ textarea {
   outline: none;
   border-style: none;
   background-color: #f9f9f9; }
-  .button:not([disabled]) {
+  button:not([disabled]), .button:not([disabled]) {
     cursor: pointer; }
-  .button:hover {
+  button:hover, .button:hover {
     background-color: #dff5c2; }
-  .button[disabled] {
+  button[disabled], .button[disabled] {
     background-color: #f9f9f9; }
 
-.section:not(:first-child) {
-  margin-top: 4em; }
+.hidden {
+  display: none !important; }
+
+.no-bottom-margin {
+  margin-bottom: 0; }
+
+.float-right {
+  float: right; }
+
+.float-left {
+  float: left; }
+
+.grey {
+  color: #999; }
+
+.note {
+  font-size: 12px;
+  padding: 0.3em 0 0.6em;
+  color: #999; }
+
+.section {
+  position: relative; }
+  .section:not(:first-child) {
+    margin-top: 4em; }
 
 .rule {
   margin: 0.5em;
   vertical-align: top; }
-  .rule .fa-long-arrow-right {
+
+#rules {
+  width: 100%; }
+  #rules .fa-long-arrow-right {
     margin-top: 0.3em; }
+  #rules td {
+    position: relative; }
+  #rules td:last-child {
+    text-align: right; }
+
+#add-rule {
+  vertical-align: top; }
+  #add-rule td:nth-child(3) {
+    padding: 0 0.5em; }
+  #add-rule td:nth-child(1) {
+    padding-right: 0.5em; }
 
 .from, .to {
   display: inline;
-  padding: 0.3em 0.6em; }
+  padding: 0.3em 0.5em; }
 
-.from {
+.from, #from-text {
   text-align: right; }
 
-.add-button, .delete-button {
+.add-button, .delete-button, #code-toggle-button {
   cursor: pointer;
-  margin-top: 0.25em; }
+  margin-top: 0.25em;
+  transition: 0.2s; }
+
+.add-button:hover {
+  color: #85c1a4; }
 
 .delete-button:hover {
-  color: #f00;
-  transition: 0.2s; }
+  color: #dc1a02; }
+
+#code-toggle-button {
+  overflow: hidden;
+  margin-right: 1em; }
+
+.CodeMirror {
+  height: auto;
+  viewportMargin: Infinity;
+  width: 300px;
+  margin-right: 0.3em;
+  border-radius: 4px;
+  background: #f9f9f9; }
+
+#add-rule .CodeMirror {
+  background: #fff;
+  border: 1px dashed #ccc; }
 
 /*# sourceMappingURL=options.css.map */

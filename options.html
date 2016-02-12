@@ -1,21 +1,45 @@
 <head>
-  <link rel="stylesheet" href="options.css" />
+  <link rel="stylesheet" href="lib/codemirror.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="options.css" />
 
   <script src="lib/underscore.min.js"></script>
   <script src="lib/jquery.min.js"></script>
+  <script src="lib/codemirror-compressed.js"></script>
+
+  <script src="util.js"></script>
   <script src="options.js"></script>
 </head>
 <body>
 
   <div class="section">
-    <h1>Replacerator Rules</h1>
+    <h1 class="no-bottom-margin">Replacerator Rules</h1>
+
     <table id="rules">
+      <tr>
+        <td></td>
+        <td></td>
+        <td>
+          <span id="code-toggle-button" class="float-right">
+            <i class="fa fa-font"></i>
+            <i class="toggle fa fa-toggle-off"></i>
+            <i class="fa fa-code grey"></i>
+          </span>
+        </td>
+        <td></td>
+      </tr>
+
       <tr id="add-rule">
-        <td><input type="text" placeholder="from" class="from" /></td>
+        <td><input id="from-text" type="text" placeholder="from" /></td>
         <td><i class="fa fa-long-arrow-right"></i></td>
-        <td><input type="text" placeholder="to" class="to" /></td>
-        <td><i class="add-button fa fa-plus"></i></td>
+        <td>
+          <input id="to-text" type="text" placeholder="to" />
+          <div id="to-js" class="hidden"></div>
+          <div class="note code-warning hidden">(may make browsing noticeably slower)</span>
+        </td>
+        <td>
+          <i class="add-button fa fa-floppy-o"></i>
+        </td>
       </tr>
     </table>
   </div>
