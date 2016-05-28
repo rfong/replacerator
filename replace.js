@@ -35,7 +35,7 @@
         to = evalStringReplaceFunction(to, matches);
         console.log(to);
       }
-      text = text.replace(new RegExp('\\b' + from + '\\b', 'g'), to);
+      text = text.replace(new RegExp('\\b' + from + '\\b', 'ig'), to);
     }
     return text;
   }

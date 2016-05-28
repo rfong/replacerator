@@ -24,7 +24,7 @@ function evalStringReplaceFunction(fnStr, matches) {
     matches: (_.map(matches, function(m) { return '"' + m + '"'; })
               .slice(1).join(',')),
   });
-  //console.log(expr);
+  console.log(expr);
   return eval(expr);
 }
 
