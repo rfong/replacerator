@@ -1,5 +1,5 @@
 body {
-  width: 550px;
+  width: 600px;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   padding: 2em 3em;
   font-size: 1em; }
@@ -15,7 +15,7 @@ input, textarea, .button {
     background-color: #fdf3e8; }
   input#to-text, textarea#to-text, .button#to-text {
     background-color: #ecf5e0;
-    width: 300px; }
+    width: 350px; }
 
 input {
   width: 100%; }
@@ -90,7 +90,7 @@ button, .button {
     padding-right: 0.5em; }
 
 .from, .to {
-  display: inline;
+  display: table-cell;
   padding: 0.3em 0.5em; }
 
 .from, #from-text {
@@ -114,7 +114,7 @@ button, .button {
 .CodeMirror {
   height: auto;
   viewportMargin: Infinity;
-  width: 300px;
+  width: 350px;
   margin-right: 0.3em;
   border-radius: 4px;
   background: #f9f9f9; }

@@ -1,17 +1,31 @@
 // These don't pollute the global namespace
 
+
+// Switch underscore to use Mustache style templating
+_.templateSettings = {
+  interpolate: /\{\{(.+?)\}\}/g
+};
+
+
 // Check that the JS string represents a valid function, and when
 // run on expected input, returns a string.
 function isStringValidFunction(fnStr, from) {
   try {
-    return typeof evalStringReplaceFunction(fnStr, from || '') === 'string';
+    return typeof evalStringReplaceFunction(fnStr, [from || '']) === 'string';
   } catch (e) {
     return false;
   }
 }
 
-function evalStringReplaceFunction(fnStr, from) {
-  return eval('(' + fnStr + ')("' + from + '")');
+function evalStringReplaceFunction(fnStr, matches) {
+  var expr = _.template('({{fn}})("{{from}}", [{{matches}}])')({
+    fn: fnStr,
+    from: matches[0],
+    matches: (_.map(matches, function(m) { return '"' + m + '"'; })
+              .slice(1).join(',')),
+  });
+  //console.log(expr);
+  return eval(expr);
 }
 
 function isValidJson(str) {
