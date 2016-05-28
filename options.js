@@ -3,7 +3,10 @@ $(document).ready(function() {
   var storage = chrome.storage.local,
       cachedRules,
       editor,
-      editorDefaultValue = 'function(from, matches) {\r  return "to";\r}';
+      editorDefaultValue = 'function(from, matches) {\r  return "to";\r}',
+      extras = {
+        'cm_to_in': {"([0-9\\.]+\\s*[x\\*]\\s*)*[0-9\\.]+\\s*(cm|CM)":"function(from, matches) {\n  // Cm to inch converter.\n  // Matches multiple dimensions of the form \"%d x ... x %d cm\", or just \"%d cm\"\n  // Sorry about the unit hegemony.\n  var values = from.match(new RegExp('[0-9\\.]+', 'g'));\n  for (var i in values) {\n    values[i] = (parseFloat(values[i]) / 2.54).toFixed(2);\n  }\n  if (values) {\n    return from + ' (' + values.join(' x ') + ' in)';\n  } return from;\n}"},
+      };
 
   // Async load rules
   // TODO: chain init to promise
@@ -181,6 +184,10 @@ $(document).ready(function() {
     $('#replace-json').click( replaceJson );
 
     $('#rules-json').keyup( updateImportButtons );
+
+    $('.add-extras').click(function(e) {
+      setRulesDump(extras[ $(e.target).attr('data-extra-id') ]);
+    });
 
     $('#code-toggle-button').click(function() {
       toggleClass($(this).find('.fa-font'), 'grey');
