@@ -22,9 +22,9 @@ function evalStringReplaceFunction(fnStr, matches) {
     fn: fnStr,
     from: matches[0],
     matches: (_.map(matches, function(m) { return '"' + m + '"'; })
-              .slice(1).join(',')),
+              .slice(1).join(',')), // todo handle m=undefined case (produces ["undefined"])
   });
-  console.log(expr);
+  //console.log(expr);
   return eval(expr);
 }
 

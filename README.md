@@ -8,12 +8,13 @@ Having grown weary of forking cloud-to-butt whenever I needed to get my `s/from/
 
 fun features
 -----
-- Comes preloaded with cloud-to-butt, and "political correctness" to "treating people with respect".
 - json loader/dumper for rulesharing
+- regex match
+- write arbitrary JS replacement functions; comes preloaded with an example cm-to-inch converter
 
 
 todo
 -----
 - enforce acyclic graph so it's impossible to define rules that cycle forever
 - some way to set precedence for rules which are substrings of each other
-- make entries editable instead of having to retype from & to
+- download font-awesome instead of importing from CDN plz

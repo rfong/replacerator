@@ -26,14 +26,13 @@
   }
   
   function handleText(text) {
+    // Run replacement rules
     for (var from in rules) {
       var to = rules[from],
           pattern = new RegExp('\\b' + from + '\\b'),
           matches = text.match(pattern);
       if (matches && isStringValidFunction(to)) {
-        console.log(matches);
         to = evalStringReplaceFunction(to, matches);
-        console.log(to);
       }
       text = text.replace(new RegExp('\\b' + from + '\\b', 'ig'), to);
     }
